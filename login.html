@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="title" content="">
+<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+<link rel="shortcut icon" type="image/png" href="http://kohinoorsquare.in/favicon.png"/>
+
+<title>ICICI Track My Loan</title>
+<link rel="stylesheet" href="css/jquery-ui.css">
+<link rel="stylesheet" href="css/style.css"> 
+
+</head>
+<body>
+<div class="header notitle">
+    <div class="loanBrand "><img src="images/tma-logo.png" alt="trackmyapplication logo" /></div>
+    <div class="brand"><img src="images/logo.png" alt="icici logo" /></div>
+</div>
+<div class="mainContent">
+	<div class="content">
+        <div class="leftSide"><img src="images/track-loan-figure.png" alt="track my loan" /></div>
+        <div class="rightSide">
+	
+            <form action="slide1.html" method="post" name="searchApplication" onsubmit="return validateForm()" class="searchForm">
+                <div class="form-control">
+                    <label id="lblPANCard">PAN</label>
+                    <input type="text" name="pan" id="pan" maxlength="10"  />
+                </div>
+                <div class="form-control ">
+                    <label>Product</label>
+                    <div class="custom-select" >
+                        <select name="product" id="product"  >
+                          <option value="">-Select-</option>
+                          <option value=""></option>
+                          <option value="1">Project Futuristic</option>
+                          <option value="2">ISDA</option>
+                          <option value="3">FX Online</option>
+                          <option value="4">Gold Metal Loan (GML)</option>
+                        </select>
+                      </div>
+                </div>
+
+
+            
+                <div class="form-control loginbtn ">
+                    <input type="submit" id="submit" name="Login" value="Login"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+<script src="js/main.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script>
+    $( function() {
+        $( "#dob" ).datepicker({
+            dateFormat: 'dd/mm/yy',
+            changeMonth: true,
+            changeYear: true,
+            maxDate: 0,
+            onSelect: function(dateText, inst) {
+                $('#appNumber, #refNumber').addClass('disabled');
+            }
+        });
+    });
+	function isNumber(evt) {
+		evt = (evt) ? evt : window.event;
+		var charCode = (evt.which) ? evt.which : evt.keyCode;
+		if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+			return false;
+		}
+		return true;
+    }
+
+</script>
+</body>
+</html>
